@@ -23,6 +23,8 @@ s_data = np.round(100*np.random.rand(s_xyz.shape[0])-50)
 c_connect = 100*np.random.rand(N, N)				# Random array of connections
 c_connect[np.tril_indices_from(c_connect)] = 0		# Set to zero inferior triangle
 
+print c_connect 
+
 
 # Because all connections are not necessary interesting,
 # it's possible to select only certain either using a
@@ -66,9 +68,10 @@ c_colorby = 'count'
 c_radiusmin = 4
 c_dynamic = (0.1, 1)
 
+print c_connect
+
 vb = vbrain(s_xyz=s_xyz, s_color='crimson', s_data=s_data, s_radiusmin=s_radiusmin, s_radiusmax=s_radiusmax,
-            s_opacity=s_opacity, a_opacity=0.05, s_cmap=s_cmap, s_cmap_vmin=s_cmap_vmin, s_cmap_vmax=s_cmap_vmax,
-            s_cmap_under=s_cmap_under, s_cmap_over=s_cmap_over, c_connect=c_connect, c_colorby=c_colorby,
-            c_radiusmin=c_radiusmin, a_template='B2', c_dynamic=c_dynamic, c_cmap=c_cmap, c_cmap_vmin=c_cmap_vmin,
-            c_cmap_vmax=c_cmap_vmax, c_cmap_under=c_cmap_under, c_cmap_over=c_cmap_over)
+            s_opacity=s_opacity, a_opacity=0.05,  c_connect=c_connect, c_colorby=c_colorby,
+            c_radiusmin=c_radiusmin, a_template='B2', cmap=c_cmap, cmap_vmin=c_cmap_vmin,
+            cmap_vmax=c_cmap_vmax, cmap_under=c_cmap_under, cmap_over=c_cmap_over)
 vb.show()

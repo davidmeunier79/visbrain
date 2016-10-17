@@ -53,7 +53,7 @@ print c_connect
 
 
 # Colormap properties (for connectivity) :
-c_cmap = 'jet'				# Matplotlib colormap
+c_cmap = 'gnuplot'				# Matplotlib colormap
 cmap_vmin, cmap_vmax = 0.02, 500.02
 
 cmap_under, cmap_over = 'gray', "white"

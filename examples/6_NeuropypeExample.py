@@ -6,11 +6,11 @@ import numpy as np
 
 from neuropype_graph.utils_net import read_Pajek_corres_nodes_and_sparse_matrix
 
-coord_file = "tmp_example_sylvain/Coord_NetworkAll_OK.txt"
+coord_file = "data_net/Coord_NetworkAll_OK.txt"
 
-net_file = "tmp_example_sylvain/graph-S02-HitWWW/Z_List.net"
+net_file = "data_net/graph/Z_List.net"
 
-label_file = "tmp_example_sylvain/Labels_NetworkAll_OK2.txt"
+label_file = "data_net/Labels_NetworkAll_OK2.txt"
 
 node_corres,sparse_matrix = read_Pajek_corres_nodes_and_sparse_matrix(net_file)
 

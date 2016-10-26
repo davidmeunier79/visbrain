@@ -28,7 +28,7 @@ class elements(CmapBase, transformations):
                              transform=self.atlas.transform, color='#ab4642')
 
         # Initialize colorbar elements  (by default, with sources elements):
-        self.cb = CmapBase(self.view.cbwc, **self.sources._cb, **kwargs)
+        self.cb = CmapBase(self.view.cbwc, **self.sources._cb)
 
         # Add transformations :
         transformations.__init__(self, **kwargs)

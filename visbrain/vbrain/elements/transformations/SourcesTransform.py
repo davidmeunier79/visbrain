@@ -88,8 +88,7 @@ class SourcesTransform(object):
             # Finally, set the mask to the surface :
             self._array2cmap(cort_mask, non_zero=non_zero, smask=smask, smaskcolor=self.sources.smaskcolor)
             # Update colorbar :
-            self.cb.cbupdate(cort_mask[non_zero], **self.sources._cb, label=self.cb['label'],
-                             fontsize=self.cb['fontsize'])
+            self.cb.cbupdate(cort_mask[non_zero], **self.sources._cb)
         else:
             warn("No sources detected. Use s_xyz input parameter to define source's coordinates")
         self.progressbar.hide()
@@ -112,8 +111,7 @@ class SourcesTransform(object):
             self.current_mask = prop
             self.current_non_zero = non_zero
             # Update colorbar :
-            self.cb.cbupdate(prop[non_zero], **self.sources._cb, label=self.cb['label'],
-                             fontsize=self.cb['fontsize'])
+            self.cb.cbupdate(prop[non_zero], **self.sources._cb)
         else:
             warn("No sources detected. Use s_xyz input parameter to define source's coordinates")
         self.progressbar.hide()

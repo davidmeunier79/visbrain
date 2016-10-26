@@ -78,6 +78,9 @@ def uiSpinValue(elements, values):
         values: list
             List of values per element   
     """
+    print len(elements)
+    print len(values)
+    
     if len(elements) != len(values):
         raise ValueError('List of Qt spins must have the same length as values')
     [k.setValue(i) for k, i in zip(elements, values)]

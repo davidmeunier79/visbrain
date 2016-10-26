@@ -1,4 +1,6 @@
-from distutils.core import setup
+#from distutils.core import setup
+from setuptools import setup
+
 import os
 
 PACKAGE = "visbrain"
@@ -8,38 +10,38 @@ AUTHOR = "etienne Combrisson"
 AUTHOR_EMAIL = "e.combrisson@gmaiil.com"
 VERSION = "0.0.3"
 
-def is_package(path):
-    return (
-        os.path.isdir(path) and
-        os.path.isfile(os.path.join(path, '__init__.py'))
-        )
+#def is_package(path):
+    #return (
+        #os.path.isdir(path) and
+        #os.path.isfile(os.path.join(path, '__init__.py'))
+        #)
 
-def find_packages(path, base="" ):
-    """ Find all packages in path """
-    packages = {}
-    for item in os.listdir(path):
-        dir = os.path.realpath(os.path.join(path, item))
-        if is_package( dir ):
-            if base:
-                module_name = "%(base)s.%(item)s" % vars()
-            else:
-                module_name = item
-            packages[module_name] = dir
-            packages.update(find_packages(dir, module_name))
-    return packages
+#def find_packages(path, base="" ):
+    #""" Find all packages in path """
+    #packages = {}
+    #for item in os.listdir(path):
+        #dir = os.path.realpath(os.path.join(path, item))
+        #if is_package( dir ):
+            #if base:
+                #module_name = "%(base)s.%(item)s" % vars()
+            #else:
+                #module_name = item
+            #packages[module_name] = dir
+            #packages.update(find_packages(dir, module_name))
+    #return packages
 
-packages=find_packages(os.path.join(os.path.dirname(os.path.realpath(__file__)), "."))
+#packages=find_packages(os.path.join(os.path.dirname(os.path.realpath(__file__)), "."))
 
 setup(
     name=NAME,
-    packages=packages.keys(),
-    package_dir=packages,
+    #packages=packages.keys(),
+    #package_dir=packages,
     version=VERSION,
     description=DESCRIPTION,
     long_description=open("README.md").read(),
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
-    install_requires=["numpy", "vispy", "matplotlib"],
+    #install_requires=["numpy", "vispy", "matplotlib"],
     maintainer=AUTHOR,
     maintainer_email=AUTHOR_EMAIL,  
     license='LICENSE.txt',

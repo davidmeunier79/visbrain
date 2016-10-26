@@ -174,7 +174,24 @@ class uiSettings(object):
     def uiUpdate_light(self):
         """
         """
+        print self.atlas.mesh.get_light
+        
+        light = []
+        
+        for cur_tup in self.atlas.mesh.get_light:
+            
+            for val in cur_tup:
+                light.append(val)
+            
+        print light
+                
         uiSpinValue([self.uil_posX, self.uil_posY, self.uil_posZ,
                      self.uil_intX, self.uil_intY, self.uil_intZ,
                      self.uil_colR, self.uil_colG, self.uil_colB, self.uil_colA,
-                     self.uil_AmbCoef, self.uil_SpecCoef], self.atlas.mesh.get_light)
+                     self.uil_AmbCoef, self.uil_SpecCoef], light)
+        
+                
+        #uiSpinValue([(self.uil_posX, self.uil_posY, self.uil_posZ),
+                     #(self.uil_intX, self.uil_intY, self.uil_intZ),
+                     #(self.uil_colR, self.uil_colG, self.uil_colB, self.uil_colA),
+                     #(self.uil_AmbCoef, self.uil_SpecCoef)], light)

@@ -1,2 +1,2 @@
-from .vbrain.vbrain import vbrain
+from .vbrain_file import vbrain_func
 # from .vbtimeseries.vbtimeseries import vbtimeseries

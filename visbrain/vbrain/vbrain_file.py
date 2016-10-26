@@ -10,7 +10,7 @@ from .elements import elements
 
 
  
-class vbrain(uiInit, uiElements, elements):
+class vbrain_func(uiInit, uiElements, elements):
 
     """
     All possible colors can be a matplotlib color name ('olive', 'slateblue'...),

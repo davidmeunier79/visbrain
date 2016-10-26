@@ -35,6 +35,9 @@ class AtlasBase(object):
 
         # Needed variables :
         self.atlaspath = os.path.dirname(visbrain.__file__)+'/vbrain/elements/templates/'
+        
+        print self.atlaspath
+        
         self._defcolor = (1,1,1)
         self._scaleMax = 100
 

@@ -1,16 +1,16 @@
 """This example demonstrate how to display deep sources using MNI
 coordinates
 """
-from visbrain import vbrain
+from visbrain.vbrain.vbrain_file import vbrain_func
 import numpy as np
 
 from neuropype_graph.utils_net import read_Pajek_corres_nodes_and_sparse_matrix
 
-coord_file = "data_net/Coord_NetworkAll_OK.txt"
+coord_file = "data/IRM/Coord_NetworkAll_OK.txt"
 
-net_file = "data_net/graph/Z_List.net"
+net_file = "data/IRM/Z_List.net"
 
-label_file = "data_net/Labels_NetworkAll_OK2.txt"
+label_file = "data/IRM/Labels_NetworkAll_OK2.txt"
 
 node_corres,sparse_matrix = read_Pajek_corres_nodes_and_sparse_matrix(net_file)
 
@@ -22,6 +22,7 @@ print "coord_file: ",
 print coord_file
 
 coords = np.loadtxt(coord_file)
+newCoords = coords[node_corres,:]
 
 #data = np.load('RealDataExample.npz')
 
@@ -53,11 +54,11 @@ print c_connect
 
 
 # Colormap properties (for connectivity) :
-c_cmap = 'gnuplot'				# Matplotlib colormap
-cmap_vmin, cmap_vmax = 0.02, 500.02
+c_cmap = 'autumn'				# Matplotlib colormap
+cmap_vmin, cmap_vmax = 0.0,500.0
 
 cmap_under, cmap_over = 'gray', "white"
 
 
-vb = vbrain(s_xyz=coords,  cmap_vmin=cmap_vmin, cmap_vmax=cmap_vmax, cmap=c_cmap,cmap_under=cmap_under, cmap_over= cmap_over,c_connect = c_connect)
+vb = vbrain_func(s_xyz=newCoords,  c_cmap_vmin=cmap_vmin, c_cmap_vmax=cmap_vmax, c_cmap=c_cmap,cmap_under=cmap_under, cmap_over= cmap_over,c_connect = c_connect)
 vb.show()

@@ -6,11 +6,11 @@ import numpy as np
 
 from neuropype_graph.utils_net import read_Pajek_corres_nodes_and_sparse_matrix
 
-coord_file = "data/Fanny/label_coords.txt"
+coord_file = "data/MEG/label_coords.txt"
 
-net_file = "data/Fanny/graph_den_pipe1_den_0_05/_freq_band_name_alpha_permut_-1/prep_rada/Z_List.net"
+net_file = "data/MEG/graph_den_pipe1_den_0_05/_freq_band_name_alpha_permut_-1/prep_rada/Z_List.net"
 
-label_file = "data/Fanny/label_names.txt"
+label_file = "data/MEG/label_names.txt"
 
 node_corres,sparse_matrix = read_Pajek_corres_nodes_and_sparse_matrix(net_file)
 

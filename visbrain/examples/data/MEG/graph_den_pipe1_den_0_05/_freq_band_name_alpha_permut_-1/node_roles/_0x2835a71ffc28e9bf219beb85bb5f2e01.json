@@ -1,0 +1,20 @@
+[
+    [
+        "Pajek_net_file",
+        [
+            "/home/david/smb4k/10.69.111.22/dycog/christina/Fanny/Manip_RestingState/CoColab/spectral_connectivity_src_MNE_aparc_aseg/spectral_connectivity_permuts_5_rada/graph_den_pipe1_den_0_05/_freq_band_name_alpha_permut_-1/prep_rada/Z_List.net",
+            "58f2b06062ceb32d8b901706050e6eff"
+        ]
+    ],
+    [
+        "rada_lol_file",
+        [
+            "/home/david/smb4k/10.69.111.22/dycog/christina/Fanny/Manip_RestingState/CoColab/spectral_connectivity_src_MNE_aparc_aseg/spectral_connectivity_permuts_5_rada/graph_den_pipe1_den_0_05/_freq_band_name_alpha_permut_-1/community_rada/Z_List.lol",
+            "6b0ad06451c0ae03e12b39eddbfd921e"
+        ]
+    ],
+    [
+        "role_type",
+        "4roles"
+    ]
+]

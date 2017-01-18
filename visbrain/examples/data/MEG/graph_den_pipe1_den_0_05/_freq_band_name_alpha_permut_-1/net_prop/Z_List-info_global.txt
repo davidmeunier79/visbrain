@@ -1,0 +1,31 @@
+File name  :	/home/david/smb4k/10.69.111.22/dycog/christina/Fanny/Manip_RestingState/CoColab/spectral_connectivity_src_MNE_aparc_aseg/spectral_connectivity_permuts_5_rada/graph_den_pipe1_den_0_05/_freq_band_name_alpha_permut_-1/prep_rada/Z_List.net
+
+Vertices   :	57
+Edges      :	146
+Self-loops :	0
+
+Directed   :	False
+Weighted   :	True
+Signed     :	False
+Integer    :	True
+Connected  :	False
+
+Total degree   :	292
+Average degree :	5.12280701754386
+Minimum degree :	1
+Maximum degree :	12
+
+Total strength   :	177208
+Average strength :	3108.91228070175430
+Minimum strength :	470
+Maximum strength :	8077
+
+Average clustering coefficient :	0.41715905926432
+  (wh)                         :	286.63133442871901
+
+Assortativity :	0.49561223025025
+  (wh)        :	0.48666629181166
+
+Efficiency          :	0.29042745753272
+  (wh)              :	0.00052507325114
+
